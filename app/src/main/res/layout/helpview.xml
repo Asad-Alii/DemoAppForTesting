@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar_help"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/dark_pink">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/help_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/back" />
+
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="25sp"
+                    android:src="@drawable/logo_header" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <WebView
+        android:background="@android:color/transparent"
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_height="match_parent"></WebView>
+    <ProgressBar
+        android:id="@+id/web_loader"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</RelativeLayout>

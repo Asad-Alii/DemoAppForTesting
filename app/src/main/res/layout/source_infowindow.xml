@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/lay_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="8dp">
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/txt_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_eta"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/txt_pickup_loc"
+            android:textColor="#19468e"
+            android:visibility="gone"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/info_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_pic"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/pickup_location" />
+
+
+</RelativeLayout>

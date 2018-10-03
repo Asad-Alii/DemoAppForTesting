@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bn_add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        app:backgroundTint="@color/circle_color"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/add_card" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar_addcard"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/dark_pink">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/payment_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/back" />
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:paddingRight="10dp"
+                    android:text="@string/add_payment_title"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_add_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.alqaswa.user.CustomText.CustomRegularTextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_add_card"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/payment_note"
+        android:textColor="@color/deep_grey"
+        android:textSize="20sp" />
+
+
+    <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="@string/payment_note1"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text2"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/payment_note2"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

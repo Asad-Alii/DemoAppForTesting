@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_pink">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar_chat"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/dark_pink">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/chat_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/back" />
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:paddingRight="10dp"
+                    android:text="@string/msgr"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/chat_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_lay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        android:stackFromBottom="true"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_pink">
+
+
+        <com.alqaswa.user.CustomText.CustomRegularEditView
+            android:id="@+id/et_message"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:hint="@string/typ_msg"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textColorHint="@color/rippelColor"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            app:srcCompat="@drawable/send" />
+    </RelativeLayout>
+</RelativeLayout>

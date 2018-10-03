@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionbar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/dark_pink">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/profile_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/back" />
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:paddingRight="10dp"
+                    android:text="@string/btn_edit"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_img_lay"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/actionbar_lay"
+        android:background="@color/main_color">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/defult_user" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_img_lay"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.alqaswa.user.CustomText.CustomBoldEditView
+            android:id="@+id/et_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <com.alqaswa.user.CustomText.CustomBoldEditView
+            android:id="@+id/et_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <com.alqaswa.user.CustomText.CustomRegularEditView
+        android:id="@+id/et_profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/square_editbox"
+        android:hint="@string/your_email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <com.alqaswa.user.CustomText.CustomRegularEditView
+        android:id="@+id/et_profile_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_profile_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/square_editbox"
+        android:hint="@string/phn_no"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <RadioGroup
+        android:id="@+id/profile_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_profile_mobile"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:buttonTint="@color/circle_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RadioButton
+            android:id="@+id/radio_btn_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/circle_color"
+            android:checked="true"
+            android:text="@string/txt_male"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/circle_color"
+            android:text="@string/txt_female"
+            android:textSize="14sp" />
+
+
+    </RadioGroup>
+
+
+</RelativeLayout>

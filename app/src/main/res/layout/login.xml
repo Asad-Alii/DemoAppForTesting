@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <FrameLayout
+        android:id="@+id/frame_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="70dp"
+            android:visibility="gone" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/social_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/defult_user"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/input_layout_userid"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#3D5B99"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/fb_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fb" />
+
+            <Button
+                android:id="@+id/btn_login_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:text="Sign in with facebook"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_userid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="150dp">
+
+            <com.alqaswa.user.CustomText.CustomRegularEditView
+                android:id="@+id/et_login_userid"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/dark_pink"
+                android:hint="@string/login_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="6dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_userid"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:passwordToggleDrawable="@mipmap/eye"
+            app:passwordToggleEnabled="true">
+
+            <com.alqaswa.user.CustomText.CustomRegularEditView
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/circle_color"
+                android:hint="@string/login_Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/loc_pass"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:padding="10dp"
+                android:src="@mipmap/eye"
+                android:visibility="gone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@color/dark_pink">
+
+            <ImageButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="10dp"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/close" />
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/btn_cancel"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_new_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_pass"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/new_user_btn"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/btn_register_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_new_user"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/txt_social_login"
+            android:textColor="@color/ripple_blue"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dark_pink">
+
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/login_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/btn_forgot_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/forgot_pass_btn"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

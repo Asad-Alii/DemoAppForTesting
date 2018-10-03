@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/type_picutre"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/frontal_taxi_cab" />
+
+        <View
+            android:id="@+id/view_select"
+            android:layout_width="75dp"
+            android:layout_height="5dp"
+            android:background="@color/ripple_blue" />
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/tv_type_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="XUV"
+            android:textColor="@color/rippelColor"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/tv_type_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="00"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/btn_fare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:rotation="180"
+                android:padding="3dp"
+                app:srcCompat="@drawable/alert_circle_outline" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

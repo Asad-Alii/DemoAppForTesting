@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/close_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+            android:tint="@color/black"
+            app:srcCompat="@drawable/close" />
+
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="@string/txt_sign_up"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:text="@string/txt_otp_note"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.alqaswa.user.CustomText.CustomRegularEditView
+                android:id="@+id/et_otp_mobile"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.8"
+                android:backgroundTint="@color/circle_color"
+                android:enabled="false"
+                android:hint="@string/phn_no"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="6dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+                <ImageView
+                    android:id="@+id/btn_edit_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:padding="10dp"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_edit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.alqaswa.user.CustomText.CustomRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/input_layout_otp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="@string/txt_otp_demo"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp">
+
+        <com.alqaswa.user.CustomText.CustomRegularEditView
+            android:id="@+id/user_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/circle_color"
+            android:hint="@string/txt_ent_otp"
+            android:inputType="text"
+            android:maxLength="10"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/otp_conf_lay"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_no_otp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/btn_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_resend"
+                android:padding="5dp"
+                android:textColor="@color/circle_color"
+                android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otp_conf_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_pink">
+
+
+            <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                android:id="@+id/btn_confirm_otp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:background="@null"
+                android:gravity="center|end"
+                android:padding="10dp"
+                android:text="@string/txt_proceed"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

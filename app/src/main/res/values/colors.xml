@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red">#f91509</color>
+    <color name="green">#17d83e</color>
+    <color name="background">#647F8C</color>
+    <color name="main_color">#BCB9BD</color>
+    <color name="circle_color">#FE9700</color>
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#11ffffff</color>
+    <color name="app_theam">#f7ec25</color>
+    <color name="app_theam_end">#fcf00f</color>
+    <color name="dark_grey">#A9A9A9</color>
+    <color name="deep_grey">#696969</color>
+    <color name="light_grey">#e4e4e4</color>
+    <color name="black">#000</color>
+    <color name="ripple_blue">#379bad</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_black">#22000000</color>
+    <color name="feedback_fare">#F1F2F4</color>
+    <color name="rating_color_bg">#E4E4E4</color>
+    <color name="paypal_color">#009CDE</color>
+    <color name="wallet_color">#0070BA</color>
+    <color name="paygate_color">#28306D</color>
+    <color name="dark_green">#228B22</color>
+    <color name="dark_pink">#FF1493</color>
+    <color name="nav_drawer">#FF69B4</color>
+
+</resources>

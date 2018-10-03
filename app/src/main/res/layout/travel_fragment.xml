@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/travel_map_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/user_travel_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:context=".MainActivity" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_with_shadow"
+        android:orientation="vertical">
+
+        <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+            android:id="@+id/tv_driver_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="@string/txt_pickup_address"
+            android:textAllCaps="true"
+            android:textColor="@color/green" />
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/tv_current_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="8dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/txt_current_location"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_driverdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_with_shadow"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ino_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="50dp"
+                    android:src="@mipmap/car_background" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/driver_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center|end"
+                    android:src="@drawable/defult_user" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/driver_img"
+                android:orientation="vertical">
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:id="@+id/driver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mahesh"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/driver_car_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="TN 22 PL 1234"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/driver_car_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="White Maruthi Ritz"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/driver_mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="768354"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:layout_below="@+id/ino_lay"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_line"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/driver_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/phone" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_contact"
+                    android:textColor="@color/black"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancel_trip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/close" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_cancel_ride"
+                    android:textColor="@color/black"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

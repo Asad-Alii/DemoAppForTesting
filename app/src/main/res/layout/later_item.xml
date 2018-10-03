@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="1.2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/later_car"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/car" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_later_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00-00-00"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_later_service_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_later_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:drawableLeft="@drawable/map_green_marker"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:text="source"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_later_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/map_red_marker"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:text="destination"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/cancel_later"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_weight="0.2"
+                android:background="@null"
+                android:padding="10dp"
+                app:srcCompat="@drawable/close_circle" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

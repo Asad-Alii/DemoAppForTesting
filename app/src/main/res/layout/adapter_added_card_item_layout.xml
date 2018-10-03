@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        android:layout_margin="2dp"
+        android:layout_below="@+id/lv_cards"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:background="@color/dark_pink">
+
+        <RadioButton
+            android:id="@+id/rb_card_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white" />
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/tv_card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rb_card_details"
+            android:alpha=".87"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/defaultcreditcard" />
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_hourly"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/dark_pink">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:paddingRight="10dp"
+                android:text="@string/title_rentale"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/hourly_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="5dp"
+                app:srcCompat="@drawable/back" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/lay_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_hourly"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/deep_grey"
+                android:textSize="17sp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/txt_hourly_note"/>
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txt_pickup_loc" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_hourly_source_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/source_edit_back"
+                android:hint="@string/txt_current_loc"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#7aa7ef"
+                android:textSize="14sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_hourly_destination_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/destination_edit_back"
+                android:hint="@string/txt_dest_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_search"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_no_hours"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/square_editbox"
+            android:hint="@string/txt_enter_hur"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:textSize="14sp"></EditText>
+
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/set_vehicle" />
+
+        <Spinner
+            android:id="@+id/sp_type"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/square_editbox"></Spinner>
+
+        <TextView
+            android:id="@+id/customBoldRegularTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/fare_detials"
+            android:textColor="@color/ripple_blue"
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:id="@+id/hourly_fare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="visible">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_with_shadow"
+                android:weightSum="2">
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/price_package"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/trip_fair"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="6dp"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/distance"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/text_distance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="6dp"
+                        android:text="--"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/hourly_book_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:background="@color/dark_pink"
+            android:clickable="true"
+            android:text="@string/btn_book"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+            android:id="@+id/hourly_book_btn_later"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/btn_later"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+</RelativeLayout>

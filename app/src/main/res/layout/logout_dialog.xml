@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/background_with_shadow">
+
+        <LinearLayout
+            android:id="@+id/header_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_power_off" />
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_logout"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/text_logut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/header_lay"
+            android:text="@string/logout_text"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/btn_logout_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/dark_pink"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/txt_yes"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/btn_logout_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="0.5"
+                android:background="@color/dark_pink"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/txt_no"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

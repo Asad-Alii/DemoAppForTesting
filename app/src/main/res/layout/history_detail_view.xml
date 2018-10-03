@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/dark_pink">
+
+        <ImageView
+            android:id="@+id/btn_close_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/back" />
+
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_close_history"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/txt_ride_detail"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:id="@+id/iv_trip_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/trip_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="00-00-2017"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:id="@+id/trip_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="000"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/trip_taxi_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/deep_grey"
+                android:text="car type" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@string/txt_symbol_dot"
+                        android:textColor="@color/green" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black"
+                        android:text="@string/txt_symbol_square" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical">
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/trip_source_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/txt_current_loc"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/deep_grey"
+                        android:textColorHint="#7aa7ef"
+                        android:textSize="14sp" />
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/trip_destination_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/not_available"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/deep_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/trip_driver_pic"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/defult_user" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/trip_driver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/txt_ride_with"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/light_grey"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Receipt"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <com.alqaswa.user.CustomText.CustomRegularTextView
+                android:id="@+id/trip_car_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Car "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/txt_base_price"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_base_fare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/min_fare"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_min_fare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/txt_time"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_minute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/txt_dis"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_mile_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/txt_book_fee"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_booking_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/service_tax"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_service_tax_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="@string/total"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/dark_grey" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

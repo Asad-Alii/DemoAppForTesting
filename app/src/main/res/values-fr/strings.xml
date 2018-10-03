@@ -1,0 +1,247 @@
+<resources>
+    <string name="app_name">Flight Passenger</string>
+    <string name="welcom_btn">Commencer</string>
+    <string name="app_title">Nikola</string>
+    <string name="sign_in">Se Connecter</string>
+    <string name="login_email">ID e-mail</string>
+    <string name="login_Password">Passe</string>
+    <string name="login_btn">Connexion</string>
+    <string name="forgot_pass_btn">Mot de passe oublié?</string>
+    <string name="new_user_btn">Nouvel utilisateur?</string>
+    <string name="req_pass_btn">Demande de mot de passe</string>
+    <string name="register_btn">Registre</string>
+    <string name="forgot_txt_note">Veuillez entrer l\'ID email pour recevoir</string>
+    <string name="first_name">Prénom</string>
+    <string name="last_Name">Nom de famille</string>
+    <string name="your_password">Votre mot de passe</string>
+    <string name="your_email">Votre email</string>
+    <string name="phn_no">Numéro de téléphone</string>
+    <string name="txt_select_country">Sélectionner un pays</string>
+    <string name="txt_select_currency">Sélectionnez devise</string>
+    <string name="login_cancelled">Login annulé</string>
+    <string name="login_failed">Echec de la connexion</string>
+    <string name="btn_edit">Modifier</string>
+    <string name="txt_wallet">Portefeuille</string>
+    <string name="btn_save">Sauver</string>
+    <string name="dialog_exit_caps">Sortie</string>
+    <string name="dialog_exit_text">Es-tu sûr?</string>
+    <string name="txt_current_loc">Emplacement du Pickup</string>
+    <string name="txt_pickup_loc">Positionnement du Pickup</string>
+    <string name="txt_drop_loc">Lieu de dépôt</string>
+    <string name="txt_types_title">Voitures disponibles</string>
+    <string name="txt_types_payment">Argent</string>
+    <string name="txt_driver">Pilote</string>
+    <string name="total_fare">Tarif total</string>
+    <string name="trip_summary">Résumé du voyage</string>
+    <string name="rate_ride">Evaluez votre trajet</string>
+
+    <string name="txt_add_payment_option">Appuyez sur l\'icône orange ci-dessous \nPour ajouter de nouvelles options de paiement.</string>
+    <string name="txt_no_ride_history">---Aucune histoire de ride disponible---</string>
+    <string name="txt_airport_ride_booking">Réservation de l\'aéroport</string>
+    <string name="book_now_txt">Réservez maintenant</string>
+
+    <string name="txt_use_this_screen">Utilisez cet écran pour réserver un tour à l\'aéroport.</string>
+
+    <string name="txt_going_coming_airport">Tu vas à l\'aéroport ou tu sors?</string>
+    <string name="txt_coming_out">Tu sors?</string>
+    <string name="txt_going_airport">Aller à l\'aéroport</string>
+    <string name="txt_select_airport">Sélectionnez l\'aéroport</string>
+
+    <string name="txt_set_pickup_location">Réglez l\'emplacement du Pickup.</string>
+    <string name="txt_select_vehicle_type">Sélectionnez le type de véhicule</string>
+
+    <string name="txt_fare_details">Détails du tarif</string>
+    <string name="txt_package_price">Prix forfaitaire</string>
+    <string name="txt_total_tollgates">Total des barrières de péage dans votre itinéraire</string>
+    <string name="txt_getting_your_location">Obtenir votre emplacement ...</string>
+    <string name="txt_messanger">Messager</string>
+    <string name="txt_type_your_message">Tapez votre message</string>
+    <string name="txt_enter_pickup_address">Entrez l\'adresse de collecte</string>
+
+    <string name="txt_fare_breakdown_desc">Votre tarif sera le prix présenté avant le voyage ou en fonction des tarifs ci-dessous et des autres suppléments et ajustements applicables. </string>
+    <string name="txt_base_fare">Tarif de base</string>
+    <string name="txt_minimum_fare">Tarif minimum</string>
+    <string name="txt_per_minute">+ Par minute</string>
+    <string name="txt_per_km">+ Par km</string>
+    <string name="txt_booking_fee">Frais de réservation</string>
+    <string name="txt_service_fee">Taxe de service</string>
+    <string name="txt_cab">Taxi</string>
+    <string name="txt_capacity">Capacité</string>
+    <string name="txt_fare_popup_desc">Le tarif sera le prix présenté lors de la réservation, ou, si le voyage change, le tarif sera basé sur les tarifs fournis. Touchez tarif pour plus de détails.</string>
+    <string name="txt_forgot_password">Mot de passe oublié</string>
+    <string name="txt_no_tolls">Pas. Péages:</string>
+    <string name="txt_ride_details">Détails du trajet</string>
+    <string name="txt_car_type">type de voiture</string>
+    <string name="txt_not_availble">-- Indisponible --</string>
+    <string name="txt_your_trip_with">votre voyage avec</string>
+    <string name="txt_receipt">Réception</string>
+    <string name="txt_time">Temps</string>
+    <string name="txt_distance">Distance</string>
+    <string name="txt_total">Total</string>
+    <string name="txt_rentals">Locations</string>
+    <string name="txt_use_this_screen_rental">Utilisez cet écran pour réserver des locations à savoir. Forfaits à base d\'heures</string>
+    <string name="txt_enter_no_of_hours">Entrez le nombre d\'heures</string>
+    <string name="txt_pickup_location">Emplacement du Pickup</string>
+    <string name="txt_no_schedules_ride"> ---Pas de manèges disponibles---</string>
+    <string name="txt_sign_in">Connexion</string>
+    <string name="txt_connect_social_account">Ou connectez-vous à l\'aide d\'un compte social.</string>
+    <string name="txt_your_balance">Votre solde</string>
+    <string name="txt_enter_amount">Entrez le montant</string>
+    <string name="txt_add_amount">Ajouter un montant</string>
+    <string name="txt_otp_desc">Vous aurez votre OTP envoyé au numéro de GSM suivant!</string>
+    <string name="txt_enter_otp">Entrez votre OTP</string>
+    <string name="txt_not_received_otp">Vous n\'avez pas reçu votre OTP?</string>
+    <string name="txt_resend">Renvoyer</string>
+    <string name="txt_proceed">Procéder</string>
+    <string name="txt_requesting">Demande ...</string>
+    <string name="txt_schedule_new_ride">Planifier un nouveau trajet</string>
+    <string name="txt_schedule">Annexe</string>
+    <string name="txt_done">Fait</string>
+    <string name="txt_tap_any_button_change_option">Appuyez sur n\'importe quel bouton ci-dessous pour changer d\'option</string>
+    <string name="txt_use_this_screen_cc_payment">Veuillez utiliser cet écran pour revenir au paiement CC.</string>
+    <string name="txt_signup">Inscrivez-vous</string>
+    <string name="txt_next">Prochaine</string>
+    <string name="txt_phone_number">Numéro de téléphone</string>
+    <string name="txt_confirm_phone_number">Confirmer le numéro de téléphone</string>
+    <string name="txt_choose_account">Choisir un compte</string>
+    <string name="txt_lets_go">Allons-y!</string>
+    <string name="txt_select_payment_gateway">Sélectionnez passerelle de paiement!</string>
+
+    <string name="txt_male">mâle</string>
+    <string name="txt_female">femelle</string>
+    <string name="txt_select_time">Sélectionnez Date et heure</string>
+
+    <string name="dialog_no_internet">Pas d\'Internet</string>
+    <string name="no_internet">Internet non disponible</string>
+    <string name="dialog_no_inter_message">Vous n\'avez pas de connexion Internet active.</string>
+    <string name="dialog_enable_3g">Activer 3 g</string>
+    <string name="dialog_enable_wifi">Activer WiFi</string>
+    <string name="dialog_exit">Sortie</string>
+
+    <string name="txt_mobile_error">Veuillez entrer le numéro de portable!</string>
+    <string name="txt_fname_error">Veuillez entrer le prénom!</string>
+    <string name="txt_lname_error">Veuillez entrer le nom de famille!</string>
+    <string name="txt_incorrect_error">ID email incorrect!</string>
+    <string name="txt_picture_error">Veuillez choisir l\'image de profil!</string>
+    <string name="txt_phone_error">Veuillez entrer le numéro de téléphone!</string>
+    <string name="txt_pass8_error">Le mot de passe doit avoir au moins 8 caractères!</string>
+
+    <string name="txt_email_error">Veuillez entrer l\'identification d\'email!</string>
+    <string name="txt_pass_error">S\'il vous plaît entrer mot de passe!</string>
+    <string name="txt_drivers_error">Il n\'y a pas de pilotes disponibles dans ce type de service!</string>
+    <string name="txt_load">Chargement ...</string>
+    <string name="txt_confirm">Confirmant ...</string>
+    <string name="txt_signin">Signature dans ...</string>
+    <string name="reg_load">Inscription ...</string>
+    <string name="updating_pro_load">Mise à jour du profil ...</string>
+    <string name="req_pass_load">Demande de mot de passe ...</string>
+
+
+    <string name="my_home">Maison</string>
+    <string name="my_payment">Ajouter des options de paiement</string>
+    <string name="nikola_wallet">Portefeuille</string>
+    <string name="my_free_ride">Promenades gratuites</string>
+    <string name="ask_bot">Ask Bot</string>
+    <string name="ride_history">Historique du trajet</string>
+    <string name="my_promo">Promos</string>
+    <string name="later_rides">Vos manèges réguliers</string>
+    <string name="my_help">Aide</string>
+    <string name="txt_logout">Déconnexion</string>
+    <string name="drawer_open">ouvrir</string>
+    <string name="drawer_close">près</string>
+    <string name="txt_yes">Oui</string>
+    <string name="txt_no">Pas</string>
+    <string name="logout_text">Êtes-vous sûr de vouloir SignOut?</string>
+    <string name="txt_gmail">Connexion gmail!</string>
+
+    <string name="txt_location">Emplacements</string>
+    <string name="txt_valid_details">Veuillez sélectionner les détails valides!</string>
+    <string name="txt_enter_address">S\'il vous plaît entrer l\'adresse!</string>
+
+    <string name="txt_trip_schedule_successfully">Voyage planifié avec succès!</string>
+    <string name="txt_ok">D\'accord</string>
+    <string name="update_success_text">Profil mis à jour avec succès</string>
+
+    <string name="txt_no_provider_found">Aucun fournisseur trouvé s\'il vous plaît essayer après un certain temps!</string>
+    <string-array name="language">
+        <item>Select Language</item>
+        <item>English(en)</item>
+        <item>French(fr)</item>
+    </string-array>
+
+
+    <string-array name="currency">
+        <item>Select Currency</item>
+        <item>Dollar(USD)</item>
+        <item>CFA Franc(XOF)</item>
+        <item>Ghana Cedis(GHS)</item>
+        <item>Nigeria Nairra(NGN)</item>
+        <item>Kenya(KES)</item>
+        <item>South Africa(ZAR)</item>
+        <item>Egypt(EGP)</item>
+        <item>African currencies(XAF)</item>
+    </string-array>
+
+    <string name="facebook_api_id">463587527410383</string>
+    <string name="sender_id">710586475149</string>
+    <string name="google_app_id">710586475149</string>
+    <string name="map_key">AIzaSyCDUdgm4jv4BGkIUyrMtNYNCzxz1P1GY1k</string>
+
+    <string name="txt_slct_option">Choisir une image</string>
+    <string name="txt_gellery">Galerie</string>
+    <string name="txt_cameray">Caméra</string>
+    <string name="txt_warning">( Disabled to avoid Vandalism of Demo )</string>
+    <string name="txt_img_error">Impossible de sélectionner l\'image!</string>
+    <string name="txt_current_location">Positionnement du Pickup</string>
+    <string name="txt_symbol_dot">\u25CF</string>
+    <string name="txt_symbol_square">\u25A0</string>
+    <string name="txt_dest_hint">Choisissez votre destination</string>
+
+    <string name="txt_req_cab">Demande de taxi</string>
+
+    <string name="txt_success_forgot_password">Mot de passe envoyé avec succès à Registered mail ID!</string>
+    <string name="txt_approx_fare">Tarif approximatif</string>
+    <string name="txt_cost_dis_fare">Coût/km</string>
+    <string name="txt_tot_dis">Approximatif dis.</string>
+    <string name="txt_cost_min_fare">Coût/min</string>
+    <string name="txt_btn_done">Fait</string>
+    <string name="txt_fare_note">Appuyez longuement sur l\'icône de voiture pour obtenir le tarif approximatif!</string>
+    <string name="txt_pickup_address">Adresse de ramassage</string>
+    <string name="txt_drop_address">Adresse de dépôt</string>
+    <string name="txt_sub_rating">Envoyer</string>
+    <string name="txt_cancel">Annuler</string>
+    <string name="et_promocode">Entrez le code promo</string>
+    <string name="btn_apply_promo">Appliquer promo</string>
+    <string name="tv_promocode_note">Si vous avez le code promo, entrez et économisez sur votre trajet.</string>
+    <string name="help_line">En cas d\'urgence</string>
+    <string name="txt_refferal_link">Votre lien de référence</string>
+
+    <string name="text_job_accepted">Le conducteur a accepté la demande</string>
+    <string name="text_driver_started">Le conducteur est en route</string>
+    <string name="text_driver_arrvied">Le chauffeur est arrivé à votre place</string>
+    <string name="text_trip_started">Votre voyage a été commencé</string>
+    <string name="text_trip_completed">Votre voyage est terminé</string>
+    <string name="btn_later"><u>No,its for a later dateNon, c\'est pour une date ultérieure</u></string>
+
+
+    <string name="txt_gps_off">Le GPS est éteint!</string>
+    <string name="txt_gps_msg">S\'il vous plaît allumer le GPS</string>
+    <string name="txt_enable">Activez</string>
+    <string name="txt_exit">Sortie</string>
+
+    <string name="no_places">--- No Saved Places ---</string>
+    <string name="history_title">Historique du trajet</string>
+    <string name="later_title">Vos manèges réguliers</string>
+    <string name="select_payment_title">Sélectionnez paiement</string>
+    <string name="add_payment_title">Ajouter des options de paiement</string>
+    <string name="txt_select_payment"><u>Touchez pour changer l\'option de paiement.</u></string>
+    <string name="txt_note_choose">This feature is <b>Disabled</b> in <b>DEMO</b>, to avoid Vandalism of the Demo</string>
+    <string name="or_connect_using_a_social_account">Ou connectez-vous en utilisant un compte social.</string>
+    <string name="txt_referral_code">Referral Code</string>
+    <string name="saved_places">Saved Places</string>
+    <string name="txt_cancel_fav">Saved place removed</string>
+    <string name="txt_favourites">Favourites</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+</resources>
+

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit_rating"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/feedback_fare"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:background="#19000000" />
+
+                    <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/total_fare"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:background="#19000000" />
+                </LinearLayout>
+
+                <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <com.alqaswa.user.CustomText.CustomRegularTextView
+                    android:id="@+id/tv_cancellation_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center"
+                    android:text="Cancellation fee: 00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="1dp"
+                        android:background="#19000000" />
+
+                    <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/trip_summary"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="1dp"
+                        android:background="#19000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_feedback_vehicle"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/defult_user"
+                        app:civ_border_color="@color/circle_color" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_feedback_user"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/defult_user"
+                        app:civ_border_color="@color/circle_color" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_feedback_location"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/defult_user"
+                        app:civ_border_color="@color/circle_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/clock" />
+
+                        <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                            android:id="@+id/text_time"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/notification" />
+
+                        <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                            android:id="@+id/text_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/feedback_fare"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/notes" />
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/tv_payment_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_payment_type"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/toll_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_barrier" />
+
+                    <com.alqaswa.user.CustomText.CustomRegularTextView
+                        android:id="@+id/tv_no_tolls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_no_tolls"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/nav_drawer">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="1dp"
+                        android:background="#19000000" />
+
+                    <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/rate_ride"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="1dp"
+                        android:background="#19000000" />
+                </LinearLayout>
+
+                <com.aurelhubert.simpleratingbar.SimpleRatingBar
+                    android:id="@+id/simple_rating_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="20dp"
+                    app:drawablePadding="10dp"
+                    app:maxRating="5" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.alqaswa.user.CustomText.CustomRegularTextView
+        android:id="@+id/btn_submit_rating"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@color/dark_pink"
+        android:gravity="center"
+        android:text="@string/txt_sub_rating"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

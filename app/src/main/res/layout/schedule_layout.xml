@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_with_shadow"
+        android:orientation="vertical">
+
+        <com.alqaswa.user.CustomText.CustomBoldRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_schedule_ttl"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:layout_gravity="center"
+               app:srcCompat="@drawable/calendar_clock"/>
+
+            <com.alqaswa.user.CustomText.CustomLightTextView
+                android:id="@+id/tv_time_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/square_editbox"
+                android:hint="@string/txt_select_time"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lst_sch_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_available_taxi"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:id="@+id/search_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/txt_symbol_dot"
+                    android:textColor="@color/green" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:text="@string/txt_symbol_square" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_sch_source_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/source_edit_back"
+                    android:hint="@string/txt_current_loc"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:dropDownHeight="250dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#7aa7ef"
+                    android:textSize="14sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_sch_destination_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/destination_edit_back"
+                    android:hint="@string/txt_dest_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:dropDownHeight="250dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.alqaswa.user.CustomText.CustomRegularTextView
+            android:id="@+id/btn_sch_submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/dark_pink"
+            android:gravity="center"
+            android:shadowDy="0"
+            android:text="@string/txt_schedule"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
